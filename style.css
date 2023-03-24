@@ -1,0 +1,43 @@
+label {
+    cursor: pointer;
+  }
+  
+  textarea {
+    width: 1000px;
+    height: 450px;
+  }
+  h1,h2,h3,h4 {
+    font-family: 'Courier New', Courier, monospace;
+    color: #213469;
+    display: flex;
+    text-align: center;
+  }
+  p {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+     }
+  body {
+   display: flex;
+   justify-content: center;
+   align-content: center; 
+  }
+  .title {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+  }
+  .UploadSection {
+    position:relative;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  #inputFile,#label
+  {
+   padding: 10px; 
+  }
+  ul,li{
+    font-size: 16px;
+   
+  }

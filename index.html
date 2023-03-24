@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+
+   </head>
+
+    <body>
+        <div class="title">
+            <h1>TXT to GIFT Converter</h1>
+            <p>On this page you will be able to upload a .txt file and convert it to GIFT format for docebo.</p>
+                <br>
+        <div class="UploadSection">
+        <h2 class="button">Upload content here</h2>
+        <form>
+        <label for="inputFile" id="label">Upload a File</label>
+        <br>
+        <input type="file" id="inputFile"></form>
+        <div>
+        <textarea id="content-target"></textarea>
+        <br>
+        <button id="function" type="button">Convert File</button>
+        </form>
+
+        <div class="specs">
+            <h2>The .txt file (or pasted text) must meet the following requirements:</h2>
+            <p id="qformat">1. Question Text<br><br>
+
+                a. answer 1<br>
+                b. answer 2<br>
+                c. answer 3<br>
+                *d. answer 4<br>
+                <br><br>
+            2. question text<br><br>
+
+            a. answer 1<br>
+            *b. answer 2<br>
+            c. answer 3<br>
+            d. answer 4<br>
+            <br><br>
+        </p>
+        <ul>
+            <li>The asterisk (*) marks the correct answer.</li>
+            <li>There must be a line break between the question and the answer set</li>
+            <li>There must be two line breaks between the last answer and the next question</li>
+            <li>At the beginning of the document, the first question must be the first line</li>
+            <li>At the end of the document, the last answer must be the last line</li>
+            <li>This can currently only convert multiple choice or true/false. If we get any questions not of this type, let me know.</li>
+        </ul>
+        </div>
+    </div>
+        <script type="text/javascript" src="conversion.js"></script>
+    </body>
+</html>
