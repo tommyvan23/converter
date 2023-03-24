@@ -4,7 +4,7 @@ label {
   
   textarea {
     width: 1000px;
-    height: 450px;
+    height: 50vh;
   }
   h1,h2,h3,h4 {
     font-family: 'Courier New', Courier, monospace;
