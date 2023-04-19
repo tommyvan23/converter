@@ -60,8 +60,7 @@ let splitLines = fileString.split(/\r?\n/);
   {if (element.startsWith ('::::[choice_multiple]<p>')) 
     {element.replace(/<p> /g, '<p>'); 
         return (element + '</p>' + '{')
-    } else if (splitLines.endsWith(".") || splitLines.endsWith(" ") || splitLines.endsWith("\r") || splitLines.endsWith("\n")) {
-    splitLines[i] = splitLines.slice(0, -1);
+    } 
   } else {return element};
     });
     for (let i = 0; i < splitLines.length; i++) {
@@ -69,6 +68,12 @@ let splitLines = fileString.split(/\r?\n/);
         splitLines[i] += '\n } \n';
       } 
     }
+for (let j = 0; j < splitLines.length; j++) {
+  let line = splitLines[j];
+  if (line.endsWith(".") || line.endsWith(" ") || line.endsWith("\r") || line.endsWith("\n")) {
+    splitLines[j] = line.slice(0, -1);
+  }
+}
   splitLines.shift();
   console.log(splitLines);
   splitLines = splitLines.join('\r\n');
