@@ -60,7 +60,9 @@ let splitLines = fileString.split(/\r?\n/);
   {if (element.startsWith ('::::[choice_multiple]<p>')) 
     {element.replace(/<p> /g, '<p>'); 
         return (element + '</p>' + '{')
-    }  else {return element};
+    } else if (splitLines.endsWith(".") || splitLines.endsWith(" ") || splitLines.endsWith("\r") || splitLines.endsWith("\n")) {
+    splitLines[i] = splitLines.slice(0, -1);
+  } else {return element};
     });
     for (let i = 0; i < splitLines.length; i++) {
       if (i < splitLines.length - 1 && splitLines[i + 1].startsWith(' //') || ((i === splitLines.length - 1))) {
