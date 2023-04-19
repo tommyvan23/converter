@@ -67,13 +67,13 @@ let splitLines = fileString.split(/\r?\n/);
       if (i < splitLines.length - 1 && splitLines[i + 1].startsWith(' //') || ((i === splitLines.length - 1))) {
         splitLines[i] += '\n } \n';
       } 
-    }
+    });
 for (let j = 0; j < splitLines.length; j++) {
   let line = splitLines[j];
   if (line.endsWith(".") || line.endsWith(" ") || line.endsWith("\r") || line.endsWith("\n")) {
     splitLines[j] = line.slice(0, -1);
   }
-}
+});
   splitLines.shift();
   console.log(splitLines);
   splitLines = splitLines.join('\r\n');
