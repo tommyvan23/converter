@@ -65,7 +65,9 @@ let splitLines = fileString.split(/\r?\n/);
     for (let i = 0; i < splitLines.length; i++) {
       if (i < splitLines.length - 1 && splitLines[i + 1].startsWith(' //') || ((i === splitLines.length - 1))) {
         splitLines[i] += '\n } \n';
-      }
+      } else if (splitLines.endsWith(".") || splitLines.endsWith(" ") || splitLines.endsWith("\r") || splitLines.endsWith("\n")) {
+    splitLines[i] = splitLines.slice(0, -1);
+  }
     }
   splitLines.shift();
   console.log(splitLines);
