@@ -80,3 +80,4 @@ document.body.appendChild(downloadLink);
 // Click the download link to start the download
 downloadLink.click();
 };
+
