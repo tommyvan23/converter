@@ -32,6 +32,11 @@ fileString = fileString.replace(/^a\./gm,'~%0%a)');
 fileString = fileString.replace(/^b\./gm,'~%0%b)');
 fileString = fileString.replace(/^c\./gm,'~%0%c)');
 fileString = fileString.replace(/^d\./gm,'~%0%d)');
+
+fileString = fileString.replace(/^*a\./gm,'=%100%a)');
+fileString = fileString.replace(/^*b\./gm,'=%100%b)');
+fileString = fileString.replace(/^*c\./gm,'=%100%c)');
+fileString = fileString.replace(/^*d\./gm,'=%100%d)');
 	
 fileString = fileString.split(/True/ || /true/).join('~%0%True');
 fileString = fileString.split((/~%0%True(?=\s.)/) || (/=%100%True(?=\s.)/)).join('True');
