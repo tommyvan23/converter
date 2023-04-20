@@ -31,10 +31,7 @@ fileString = fileString.replace(/\*/g, "=");
 fileString = fileString.split('a.'||'a)'||'A)'||'(A)'|| '(a)'&& !(('a.\r') || ('a. \r') || ('a.\n') || ('a. \n'))&& !(('a\r') || ('a \r') || ('a\n') || ('a \n'))).join('~%0%a)');
 fileString = fileString.split('b.'||'b)'||'B)'||'(B)' || '(b)'&& !(('b.\r') || ('b. \r') || ('b.\n') || ('b. \n'))&& !(('b\r') || ('b \r') || ('b\n') || ('b \n'))).join('~%0%b)');
 fileString = fileString.split('c.'||'c)'||'C)'||'(C)' || '(c)'&& !(('c.\r') || ('c. \r') || ('c.\n') || ('c. \n'))&& !(('c\r') || ('c \r') || ('c\n') || ('c \n'))).join('~%0%c)');
-fileString = fileString.replace(/d\.(?!\n)/g,'~%0%d)');
-fileString = fileString.replace(/d\.(?!\r)/g,'~%0%d)');
-fileString = fileString.replace(/d \.(?!\n)/g,'~%0%d)');
-fileString = fileString.replace(/d \.(?!\r)/g,'~%0%d)');
+fileString = fileString.replace(/^d\./gm,'~%0%d)');
 	
 fileString = fileString.split(/True/ || /true/).join('~%0%True');
 fileString = fileString.split((/~%0%True(?=\s.)/) || (/=%100%True(?=\s.)/)).join('True');
