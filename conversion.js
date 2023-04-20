@@ -27,7 +27,6 @@ document.getElementById ("function").addEventListener ("click", convertFile, fal
 function convertFile(){
 
 //Replacements
-fileString = fileString.replace(/\*/g, "=");
 fileString = fileString.replace(/^a\./gm,'~%0%a)');
 fileString = fileString.replace(/^b\./gm,'~%0%b)');
 fileString = fileString.replace(/^c\./gm,'~%0%c)');
@@ -37,6 +36,8 @@ fileString = fileString.replace(/^\*a\./gm,'=%100%a)');
 fileString = fileString.replace(/^\*b\./gm,'=%100%b)');
 fileString = fileString.replace(/^\*c\./gm,'=%100%c)');
 fileString = fileString.replace(/^\*d\./gm,'=%100%d)');
+
+fileString = fileString.replace(/\*/g, "=");
 	
 fileString = fileString.split(/True/ || /true/).join('~%0%True');
 fileString = fileString.split((/~%0%True(?=\s.)/) || (/=%100%True(?=\s.)/)).join('True');
